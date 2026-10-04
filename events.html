@@ -84,22 +84,22 @@
             </div>
         </div>
 
-        <div class="row wide gallery-grid" aria-label="New Project photo gallery">
-            <div class="column gallery-grid__item">
+        <div class="row wide gallery-grid" role="list" aria-label="New Project photo gallery">
+            <div class="column gallery-grid__item" role="listitem">
                 <button class="gallery-card" type="button" data-gallery-image="DSC01022.jpg" data-gallery-caption="Making music together">
-                    <img src="DSC01022.jpg" alt="A musician performing at a New Project gathering" loading="lazy">
+                    <img src="DSC01022.jpg" width="1800" height="2700" alt="A musician performing at a New Project gathering" loading="lazy">
                     <span class="gallery-card__caption">Making music together</span>
                 </button>
             </div>
-            <div class="column gallery-grid__item">
+            <div class="column gallery-grid__item" role="listitem">
                 <button class="gallery-card" type="button" data-gallery-image="DSC01056.jpg" data-gallery-caption="Words shared out loud">
-                    <img src="DSC01056.jpg" alt="Two artists sharing a live performance at microphones" loading="lazy">
+                    <img src="DSC01056.jpg" width="2700" height="1800" alt="Two artists sharing a live performance at microphones" loading="lazy">
                     <span class="gallery-card__caption">Words shared out loud</span>
                 </button>
             </div>
-            <div class="column gallery-grid__item">
+            <div class="column gallery-grid__item" role="listitem">
                 <button class="gallery-card" type="button" data-gallery-image="DSC01061.jpg" data-gallery-caption="In the room together">
-                    <img src="DSC01061.jpg" alt="Guests gathered together at a New Project event" loading="lazy">
+                    <img src="DSC01061.jpg" width="2700" height="1800" alt="Guests gathered together at a New Project event" loading="lazy">
                     <span class="gallery-card__caption">In the room together</span>
                 </button>
             </div>
@@ -143,7 +143,7 @@
     <dialog class="gallery-modal" id="gallery-modal" aria-label="Expanded gallery image">
         <button class="gallery-modal__close" type="button" aria-label="Close image">&times;</button>
         <figure>
-            <img class="gallery-modal__image" src="" alt="">
+            <img class="gallery-modal__image" alt="">
             <figcaption class="gallery-modal__caption"></figcaption>
         </figure>
     </dialog>
@@ -157,3 +157,4 @@
     <script src="js/gallery.js"></script>
 
 </body>
+</html>
