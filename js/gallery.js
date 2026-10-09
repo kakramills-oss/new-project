@@ -2,6 +2,18 @@
     "use strict";
 
     const modal = document.getElementById("gallery-modal");
+    const albumToggle = document.querySelector(".session-album-card");
+    const albumPhotos = document.getElementById("session-003-photos");
+
+    if (albumToggle && albumPhotos) {
+        albumToggle.addEventListener("click", function () {
+            const isExpanded = albumToggle.getAttribute("aria-expanded") === "true";
+            albumToggle.setAttribute("aria-expanded", String(!isExpanded));
+            albumPhotos.hidden = isExpanded;
+            if (!isExpanded) albumPhotos.scrollIntoView({ behavior: "smooth", block: "start" });
+        });
+    }
+
     if (!modal || typeof modal.showModal !== "function") return;
 
     const modalImage = modal.querySelector(".gallery-modal__image");
@@ -10,7 +22,8 @@
     let lastTrigger = null;
 
     document.querySelectorAll(".gallery-card").forEach(function (card) {
-        card.addEventListener("click", function () {
+        card.addEventListener("click", function (event) {
+            event.preventDefault();
             lastTrigger = card;
             modalImage.src = card.dataset.galleryImage;
             modalImage.alt = card.querySelector("img").alt;
